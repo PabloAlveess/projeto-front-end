@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './CadastrarMesas.module.css';
 
 const CadastrarMesas = () => {
   const [mesas, setMesas] = useState([]);

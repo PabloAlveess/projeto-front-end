@@ -1,17 +1,18 @@
-import styles from './Header.module.css'
+import { Link } from 'react-router-dom';
+import styles from './Header.module.css';
 
 function Header() {
   return (
     <header className={styles.header}>
-      <span>Bem-Vindos!!</span>
+      <span>Restaurante Bololo</span>
       <nav>
-        <a href=''>Iniciar</a>
-        <a href=''>Cadastro</a>
-        <a href=''>Perfil</a>
-        <a href=''>Atualizar Perfil</a>
+        <Link to="/"> Início </Link>
+        <Link to="/cadastrarmesa"> Cadastrar Mesa</Link>
+        <Link to="/reservarmesa"> Reservar Mesa</Link>
+        <Link to="/"> Consultar Mesa</Link>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

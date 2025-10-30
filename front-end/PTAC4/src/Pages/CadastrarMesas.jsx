@@ -10,7 +10,7 @@ const CadastrarMesas = () => {
 
   const salvarMesa = () => {
     if (!numeroMesa || !capacidade) {
-      alert('Preencha todos os campos');
+      alert('Preencha todos os campos!');
       return;
     }
 
@@ -35,7 +35,6 @@ const CadastrarMesas = () => {
     limparFormulario();
   };
 
-
   const limparFormulario = () => {
     setNumeroMesa('');
     setCapacidade('');
@@ -58,52 +57,82 @@ const CadastrarMesas = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Cadastrar Mesa</h2>
 
-      <div>
-        <label>Número da Mesa:</label>
-        <input
-          type="text"
-          value={numeroMesa}
-          onChange={(e) => setNumeroMesa(e.target.value)}
-          disabled={editarId !== null} 
-        />
+      <div className={styles.form}>
+        <div className={styles.formGroup}>
+          <label>Número da Mesa:</label>
+          <input
+            type="text"
+            placeholder="Ex: 01"
+            value={numeroMesa}
+            onChange={(e) => setNumeroMesa(e.target.value)}
+            disabled={editarId !== null}
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Capacidade:</label>
+          <input
+            type="number"
+            min="1"
+            placeholder="Ex: 4"
+            value={capacidade}
+            onChange={(e) => setCapacidade(e.target.value)}
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Status:</label>
+          <select value={status} onChange={(e) => setStatus(e.target.value)}>
+            <option value="disponível">Disponível</option>
+            <option value="ocupada">Ocupada</option>
+          </select>
+        </div>
+
+        <div className={styles.buttons}>
+          <button className={styles.saveBtn} onClick={salvarMesa}>
+            {editarId ? 'Atualizar' : 'Salvar'}
+          </button>
+          <button className={styles.clearBtn} onClick={limparFormulario}>
+            Limpar
+          </button>
+        </div>
       </div>
 
-      <div>
-        <label>Capacidade da Mesa:</label>
-        <input
-          type="number"
-          min="1"
-          value={capacidade}
-          onChange={(e) => setCapacidade(e.target.value)}
-        />
+      <div className={styles.listSection}>
+        <h3>Mesas Cadastradas</h3>
+        {mesas.length === 0 ? (
+          <p className={styles.emptyList}>Nenhuma mesa cadastrada ainda.</p>
+        ) : (
+          <ul>
+            {mesas.map((mesa) => (
+              <li key={mesa.id} className={styles.listItem}>
+                <div className={styles.info}>
+                  <strong>Mesa {mesa.numero}</strong>
+                  <span>Capacidade: {mesa.capacidade}</span>
+                  <span
+                    className={`${styles.status} ${
+                      mesa.status === 'ocupada' ? styles.ocupada : styles.disponivel
+                    }`}
+                  >
+                    {mesa.status}
+                  </span>
+                </div>
+                <div className={styles.actions}>
+                  <button className={styles.editBtn} onClick={() => editarMesa(mesa)}>
+                    Editar
+                  </button>
+                  <button className={styles.deleteBtn} onClick={() => excluirMesa(mesa.id)}>
+                    Excluir
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
-
-      <div>
-        <label>Status da Mesa:</label>
-        <select value={status} onChange={(e) => setStatus(e.target.value)}>
-          <option value="disponível">Disponível</option>
-          <option value="ocupada">Ocupada</option>
-        </select>
-      </div>
-
-      <button onClick={salvarMesa}>{editarId ? 'Atualizar' : 'Salvar'}</button>
-      <button onClick={limparFormulario}>Limpar</button>
-
-      <hr />
-
-      <h3>Mesas Cadastradas</h3>
-      <ul>
-        {mesas.map((mesa) => (
-          <li key={mesa.id}>
-            Nº: {mesa.numero} | Capacidade: {mesa.capacidade} | Status: {mesa.status}
-            <button onClick={() => editarMesa(mesa)}>Editar</button>
-            <button onClick={() => excluirMesa(mesa.id)}>Excluir</button>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

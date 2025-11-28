@@ -1,16 +1,15 @@
-/* === Centralização e Layout Geral === */
 body {
   display: flex;
-  justify-content: center;   /* Centraliza horizontalmente */
-  align-items: flex-start;   /* Mantém abaixo do menu */
-  min-height: 100vh;         /* Ocupa toda a altura da tela */
-  background: #141426;       /* Cor de fundo */
+  justify-content: center;   
+  align-items: flex-start;   
+  min-height: 100vh;         
+  background: #141426;       
   margin: 0;
-  padding-top: 80px;         /* Espaço para o menu superior */
+  padding-top: 80px;         
   font-family: 'Poppins', sans-serif;
 }
 
-/* === Container Principal === */
+
 .container {
   max-width: 750px;
   width: 100%;
@@ -22,7 +21,6 @@ body {
   color: #f9f9fb;
 }
 
-/* === Títulos === */
 h2 {
   text-align: center;
   color: #00d4ff;
@@ -35,7 +33,6 @@ h3 {
   margin-bottom: 15px;
 }
 
-/* === Formulário === */
 .form {
   display: flex;
   flex-direction: column;
@@ -70,7 +67,6 @@ select:focus {
   outline: 1px solid #00d4ff;
 }
 
-/* === Botões === */
 .buttons {
   display: flex;
   justify-content: center;
@@ -107,7 +103,6 @@ select:focus {
   background: #2f2f45;
 }
 
-/* === Lista de Mesas === */
 .listSection {
   margin-top: 40px;
 }

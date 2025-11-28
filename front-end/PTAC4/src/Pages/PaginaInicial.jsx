@@ -4,7 +4,7 @@ import styles from './PaginaInicial.module.css';
 const PaginaInicial = () => {
   return (
     <>
-      {/* O container agora ocupa 100vw e 100vh (controlado pelo CSS) */}
+      {}
       <div className={styles.container}>
         <div className={styles.overlay}>
           <div className={styles.content}>
@@ -16,10 +16,10 @@ const PaginaInicial = () => {
               reserve sua mesa com facilidade!
             </p>
             <div className={styles.buttons}>
-              <a href="/cadastrar-mesa" className={styles.primaryBtn}>
+              <a href="/cadastrarmesa" className={styles.primaryBtn}>
                 Cadastrar Mesa
               </a>
-              <a href="/reservar-mesa" className={styles.secondaryBtn}>
+              <a href="/reservarmesa" className={styles.secondaryBtn}>
                 Reservar Mesa
               </a>
             </div>

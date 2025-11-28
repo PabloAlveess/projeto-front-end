@@ -23,3 +23,8 @@ html, body {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+body {
+  padding-top: 85px;       /* evita sobreposição do header */
+  background-color: var(--gray);
+}

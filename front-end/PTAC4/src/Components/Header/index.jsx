@@ -11,6 +11,14 @@ function Header() {
           Início
         </NavLink>
 
+        <NavLink to="/cadastro" className={({ isActive }) => isActive ? styles.active : ""}>
+          Criar Conta
+        </NavLink>
+
+        <NavLink to="/login" className={({ isActive }) => isActive ? styles.active : ""}>
+          Fazer Login
+        </NavLink>
+
         <NavLink to="/cadastrarmesa" className={({ isActive }) => isActive ? styles.active : ""}>
           Cadastrar Mesa
         </NavLink>

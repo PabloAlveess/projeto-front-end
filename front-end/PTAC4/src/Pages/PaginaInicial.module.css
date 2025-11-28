@@ -6,6 +6,7 @@
   overflow-x: hidden;
 }
 
+/* Remove qualquer espaço extra */
 :global(main), :global(#root), :global(.App) {
   width: 100%;
   max-width: 100%;
@@ -13,18 +14,33 @@
   padding: 0;
 }
 
+/* CORREÇÃO IMPORTANTE: garantir que não tenha espaço acima */
+:global(header) {
+  margin: 0;
+  padding: 0;
+  background: transparent; /* remove a faixa escura */
+  position: absolute;      /* header fica sobre a imagem */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
 
+
+/* HERO / BANNER */
 .container {
   position: relative;
   width: 100vw;
-  height: calc(100vh - 61px); 
-  background-image: url('./banner.jpg'); 
+
+  /* Agora o banner cobre TODA a tela real */
+  height: 100vh;
+
+  background-image: url('./banners.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
-
 
 .overlay {
   position: absolute;
@@ -84,7 +100,7 @@ p {
 }
 
 .primaryBtn:hover {
-   background-color: transparent;
+  background-color: transparent;
   color: #fff;
   border: 2px solid #fff;
 }
@@ -110,7 +126,6 @@ p {
   }
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;

@@ -15,16 +15,25 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;      
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
+
 body {
-  padding-top: 85px;       /* evita sobreposição do header */
   background-color: var(--gray);
+}
+
+
+.page {
+  padding-top: 100px;
 }

@@ -16,9 +16,6 @@ const PaginaInicial = () => {
               reserve sua mesa com facilidade!
             </p>
             <div className={styles.buttons}>
-              <a href="/cadastrarmesa" className={styles.primaryBtn}>
-                Cadastrar Mesa
-              </a>
               <a href="/reservarmesa" className={styles.secondaryBtn}>
                 Reservar Mesa
               </a>

@@ -19,7 +19,7 @@
 
 /* Evita o conteúdo ficar atrás do header */
 body {
-  padding-top: 80px !important;
+  padding-top: 65px !important;
 }
 
 .header span {
@@ -69,7 +69,7 @@ body {
   }
 
   body {
-    padding-top: 100px !important; 
+    padding-top: 65px !important; 
   }
 }
 

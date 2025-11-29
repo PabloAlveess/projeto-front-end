@@ -17,7 +17,6 @@
   z-index: 1000;
 }
 
-/* Evita o conteúdo ficar atrás do header */
 body {
   padding-top: 65px !important;
 }
@@ -43,7 +42,6 @@ body {
   color: #00d4ff;
 }
 
-/* Link ativo */
 .active {
   color: #00d4ff;
   font-weight: bold;

@@ -14,12 +14,12 @@
   padding: 0;
 }
 
-/* CORREÇÃO IMPORTANTE: garantir que não tenha espaço acima */
+
 :global(header) {
   margin: 0;
   padding: 0;
-  background: transparent; /* remove a faixa escura */
-  position: absolute;      /* header fica sobre a imagem */
+  background: transparent; 
+  position: absolute;      
   top: 0;
   left: 0;
   width: 100%;
@@ -27,12 +27,9 @@
 }
 
 
-/* HERO / BANNER */
 .container {
   position: relative;
   width: 100vw;
-
-  /* Agora o banner cobre TODA a tela real */
   height: 100vh;
 
   background-image: url('./banners.png');

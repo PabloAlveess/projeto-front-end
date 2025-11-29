@@ -8,6 +8,7 @@ import CadastrarMesas from './Pages/CadastrarMesas';
 import ReservarMesas from './Pages/ReservarMesas';
 import PaginaInicial from './Pages/PaginaInicial';
 import ConsultarMesas from './Pages/ConsultarMesas';
+import Cardapio from './Pages/Cardapio';
 
 import Login from './Pages/Login';
 import Cadastro from './Pages/Cadastro';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/consultarmesa" element={<ConsultarMesas />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/cardapio" element={<Cardapio />} />
       </Routes>
 
       <Footer />

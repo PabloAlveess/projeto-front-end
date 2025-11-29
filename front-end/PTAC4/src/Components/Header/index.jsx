@@ -11,6 +11,10 @@ function Header() {
           Início
         </NavLink>
 
+        <NavLink to="/cardapio" className={({ isActive }) => isActive ? styles.active : ""}>
+          Cardapio
+        </NavLink>
+         
         <NavLink to="/cadastro" className={({ isActive }) => isActive ? styles.active : ""}>
           Criar Conta
         </NavLink>

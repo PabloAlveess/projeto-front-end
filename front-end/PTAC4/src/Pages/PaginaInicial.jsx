@@ -12,12 +12,12 @@ const PaginaInicial = () => {
               Bem-vindo ao <span>Restaurante Bololo</span> 🍽️
             </h1>
             <p>
-              Onde o sabor encontra a tradição. Experimente nossos pratos e
+              Experimente nossos pratos e
               reserve sua mesa com facilidade!
             </p>
             <div className={styles.buttons}>
-              <a href="/reservarmesa" className={styles.secondaryBtn}>
-                Reservar Mesa
+              <a href="/cardapio" className={styles.secondaryBtn}>
+                Cardapio
               </a>
             </div>
           </div>
